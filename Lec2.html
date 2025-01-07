@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var subname = 'DE'
+      //   var subname = prompt('Enter Subject name: ')
+      if (subname == 'FSD-1') {
+        document.write('Sub Faculty is PSP')
+      } else if (subname == 'FCSP-1') {
+        document.write('Sub Faculty is TAT')
+      } else if (subname == 'DE') {
+        document.write('Sub Faculty is VBY')
+      } else if (subname == 'PS') {
+        document.write('Sub Faculty is HRJ')
+      } else {
+        document.write('Wrong Choice.')
+      }
+      document.write('<br>')
+      for (i = 0; i < 11; i++) {
+        if (i % 2 != 0) {
+          document.write(i + '<br>')
+        }
+      }
+
+      function abc(n) {
+        for (i = 0; i < n; i++) {
+          for (j = 0; j < i; j++) {
+            if ((i + j) % 2 == 0) {
+              document.write('0')
+            } else {
+              document.write('1')
+            }
+          }
+          document.write('<br>')
+        }
+      }
+      abc(5)
+      document.write('<br />')
+
+      var d = new Date()
+
+      document.write(d.getFullYear() + '<br>')
+      document.write(d.getMonth() + '<br />')
+      document.write(d.getDate() + '<br />')
+      document.write(d.getDay() + '<br />')
+      document.write(d.getTime() + '<br />')
+      document.write(d.getHours() + '<br />')
+      document.write(d.getMinutes() + '<br />')
+      document.write(d.getSeconds() + '<br />')
+      document.write(d.setFullYear('2005') + '<br>')
+      document.write(d.getFullYear() + '<br />')
+
+      document.write('<br />')
+
+      document.write(Math.max(5, 6) + '<br>')
+      document.write(Math.min(5, 6) + '<br />')
+      document.write(Math.round(5.54) + '<br />')
+      document.write(Math.ceil(5.54) + '<br />')
+      document.write(Math.floor(5.54) + '<br />')
+      document.write(Math.pow(2, 3) + '<br />')
+      document.write(Math.abs(-2) + '<br />')
+      document.write(Math.sqrt(16) + '<br />')
+      document.write(Math.ceil(Math.random() * 100) + '<br />')
+
+      x = 'hello'
+      y = ' World'
+      x1 = 'this is demo'
+      y1 = 'is'
+
+      document.write(
+        'Char at 0 th index : ' + x.charAt(0) + ' ' + x.charCodeAt(0) + '<br>'
+      )
+      document.write(x1.concat(y) + '<br>')
+      document.write(x1.indexOf(y1) + '<br>')
+      document.write(x1.lastIndexOf(y1) + '<br>')
+      document.write(x.replace('hell', y) + '<br>')
+      document.write(x.split('l') + '<br>')
+      document.write(x1.split(' ') + '<br>')
+      document.write(x1.substr(2, 5) + '<br>')
+      document.write(x1.substring(2, 6) + '<br>')
+
+      document.write('<br>')
+
+      str = 'ajanta'
+      document.write(
+        str.substring(str.indexOf('a') + 1, str.lastIndexOf('a')) + '<br>'
+      )
+
+      dig = 27
+      var b = 0
+      while (dig != 0) {
+        document.write((dig % 10) + '<br>')
+        b = dig % 10
+        dig = Math.floor(dig / 10)
+      }
+      document.write('Answer: ' + Math.pow(b, 3))
+    </script>
+  </head>
+  <body></body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script type="text/javascript" language="javascript">
+      document.write('Internal JS')
+      console.log('Hello')
+
+      function abc() {
+        alert('This is a functional Alert')
+      }
+      function fun(a, b) {
+        alert(a + ' ' + b)
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" onclick="abc()" value="Hi" />
+    <script>
+      document.write('This is body script')
+      b = 9
+      function a() {
+        b = 100
+        console.log(b)
+      }
+      a()
+      const Person = { firstname: 'Meet', lastname: 'Bhavsar', age: 20 }
+      const Fruit = ['Banana', 'Orange', 'Apple', 'Kiwi']
+      console.log(typeof b)
+      console.log(typeof c)
+      console.log(typeof 'b')
+      console.log(typeof null)
+      console.log(typeof (name === null))
+      console.log(typeof Person)
+      console.log(Person)
+      document.write(
+        '<br>Hello ,My name is ' +
+          Person.firstname +
+          ' ' +
+          Person.lastname +
+          '<br> My age is ' +
+          Person.age
+      )
+      document.write('<br>' + Fruit[Fruit.length - 1] + '<br />')
+      console.log(Fruit[Fruit.length - 1])
+      //   document.write('<br>' + Fruit[-1]) Undefined
+
+      var i
+      var emp = new Array('Abc', 'xyz', 'pqr')
+      for (i = 0; i < emp.length; i++) {
+        document.write(emp[i] + '<br>')
+      }
+
+      var a = [2, 4, 3, 1, 5]
+      var i
+      for (i = 0; i < a.length; i++) {
+        console.log('Multiplication is: ' + 2 * a[i])
+        document.write('<br>Multiplication is: ' + 2 * a[i])
+      }
+
+      var a = function (a, b) {
+        return a + b
+      }
+      let result = a(10, 20)
+      document.write('<br>'+result)
+
+      function emp1(id,name,age){
+        this.id=id
+        this.name=name
+        this.age=age
+      }
+
+      let employee=new emp1(1,"abc",23)
+      document.write('<br>'+employee.id+" "+employee.name+" "+employee.age+'<br>')
+    </script>
+    <input type="button" onclick="fun('Meet','Bhavsar')" value="Name" />
+  </body>
+</html>
