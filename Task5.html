@@ -1,0 +1,34 @@
+<!-- write a JS code to convert uppercase to lowercase from return text onclick -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="lower">hello</p>
+    <p id="upper">WORLD</p>
+    <input type="button" value="Change" onclick="change()" />
+    <br />
+    <p id="i1">Para1</p>
+    <p id="i2">Para2</p>
+    <script>
+      function change() {
+        var text = document.getElementsByTagName('p')
+        for (var i = 0; i < text.length; i++) {
+          if (text[i].id == 'lower') {
+            text[i].style.textTransform = 'uppercase'
+          } else {
+            text[i].style.textTransform = 'lowercase'
+          }
+        }
+      }
+
+      var i1 = document.getElementById('i1')
+      var i2 = document.getElementById('i2')
+      i1.align = 'center'
+      i2.setAttribute('align', 'right')
+    </script>
+  </body>
+</html>

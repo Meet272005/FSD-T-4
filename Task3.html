@@ -1,0 +1,32 @@
+<!-- Write a code using JS. Create a function that takes an array of objects
+(groceries) which calculates the total price and returns it as a number. A
+grocery object has a product, a quantity and a price. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const list = [
+        { Product: 'Apple', Quantity: 2, Price: 80 },
+        { Product: 'Banana', Quantity: 5, Price: 10 },
+        { Product: 'Milk', Quantity: 1, Price: 30 }
+      ]
+
+      function CTP(groceries) {
+        let tp = 0
+        for (let i = 0; i < groceries.length; i++) {
+          const { Quantity, Price } = groceries[i]
+          tp += Quantity * Price
+        }
+        return tp
+      }
+
+      console.log(CTP(list).toFixed(2))
+    </script>
+  </body>
+</html>

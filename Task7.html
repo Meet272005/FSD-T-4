@@ -1,0 +1,56 @@
+<!-- write a Js to handel the following event :
+    if mouse over  heading it should turn yelllow.
+    if mouse goes out then it should turn black.
+    if button named find time is clicked then it date and time information.
+    if button named red is cliked then bgcolor should turn red and similarly with button named green -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1
+      onmouseenter="this.style.backgroundColor='yellow'"
+      onmouseleave="this.style.backgroundColor='black'"
+      style="color: white"
+    >
+      Heading
+    </h1>
+
+    <input type="button" onclick="fun()" value="Time" />
+    <p id="info"></p>
+    <input type="button" onclick="fun1()" value="RED" />
+    <input type="button" onclick="fun2()" value="GREEN" />
+
+    <script>
+      function fun() {
+        var d = new Date()
+        var e = document.getElementById('info')
+        var i =
+          'Date: ' +
+          d.getDate() +
+          '/' +
+          (d.getMonth() + 1) +
+          '/' +
+          d.getFullYear() +
+          ' Time: ' +
+          d.getTime()
+        e.innerHTML = i
+      }
+
+      function fun1() {
+        // document.body.style.backgroundColor = 'red'
+        var b = document.getElementsByTagName('body')
+        b[0].style.backgroundColor = 'red'
+      }
+
+      function fun2() {
+        var b = document.getElementsByTagName('body')
+        b[0].style.backgroundColor = 'green'
+      }
+    </script>
+  </body>
+</html>

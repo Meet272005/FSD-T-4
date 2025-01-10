@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function war() {
+        alert('Warning MSG')
+        document.write('Danger Ahead')
+      }
+      function confi() {
+        var d = confirm('Do you want to continue?')
+        if (d == true) {
+          document.write('User want to Continue')
+        } else {
+          document.write('User dont want to Continue')
+        }
+      }
+      function prom() {
+        var data = prompt('Enter name: ')
+        document.write('Welcome ' + data)
+      }
+    </script>
+  </head>
+  <body>
+    <input type="button" value="OK" onclick="war()" />
+    <input type="button" value="OK" onclick="confi()" />
+    <input type="button" value="OK" onclick="prom()" />
+    <br />
+
+    <!-- Advance JS  -->
+    <p id="demo"></p>
+    <h1>To AJS</h1>
+    <h1>To AJS</h1>
+    <h1>To AJS</h1>
+
+    <script>
+      //   document.getElementsByTagName('h1')[0].innerHTML = 'Heading 1' Even When there is only one tag
+      document.getElementById('demo').innerHTML = 'Welcome'
+      document.getElementById('demo').style.backgroundColor = 'red'
+      var x = document.getElementsByTagName('h1')
+      for (i = 0; i < x.length; i++) {
+        x[i].innerHTML = 'Heading ' + (i + 1)
+      }
+    </script>
+  </body>
+</html>

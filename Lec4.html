@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function d1() {
+        document.getElementById('d').innerHTML = 'Text changed'
+      }
+
+      function change(id) {
+        id.innerHTML = 'Text changed'
+      }
+
+      function up(id) {
+        id.innerHTML = 'Release'
+        id.style.backgroundColor = 'brown'
+      }
+
+      function down(id) {
+        id.innerHTML = 'Clicked'
+        id.style.backgroundColor = 'wheat '
+      }
+
+      function fun(e) {
+        val = e.button
+
+        switch (val) {
+          case 0:
+            alert('left click')
+            break
+          case 1:
+            alert('middle click')
+            break
+          case 2:
+            alert('right click')
+            break
+        }
+      }
+
+      function fun0(id) {
+        id.style.backgroundColor = 'blue'
+      }
+
+      function fun2(e) {
+        alert(e.keyCode)
+      }
+
+      function fun3(id) {
+        id.style.backgroundColor = 'red'
+      }
+    </script>
+  </head>
+  <body onkeyup="fun0(this)" onkeypress="fun2(event)" onkeydown="fun3(this)">
+    <h1 onclick="this.innerHTML='Text changed'">Click to change 1</h1>
+
+    <h1 id="d" onclick="d1()">Click to change 2</h1>
+
+    <h1 onclick="change(this)">Click to change 3</h1>
+
+    <div
+      style="
+        background-color: cyan;
+        color: white;
+        padding: 20px;
+        width: 70px;
+        height: 30px;
+      "
+      onmouseup="up(this)"
+      onmousedown="down(this)"
+    >
+      Click
+    </div>
+    <br />
+    <div
+      style="
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 250px;
+        height: 100px;
+      "
+      onmouseenter="this.innerHTML='Mouse enterd'"
+      onmouseleave="this.innerHTML='Mouse Left'"
+    ></div>
+    <br />
+    <div
+      style="
+        background-color: black;
+        color: white;
+        padding: 20px;
+        width: 250px;
+        height: 100px;
+      "
+      onmousedown="fun(event)"
+    >
+      Click
+    </div>
+    <br />
+  </body>
+</html>

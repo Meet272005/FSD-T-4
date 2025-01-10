@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p id="a">P TAG-1</p>
+    <p class="cl">P TAG-2</p>
+    <p>P TAG-3</p>
+    <input type="button" value="click" onclick="change()" />
+
+    <script>
+      function change() {
+        var e = document.getElementsByTagName('p')
+        for (i = 0; i < e.length; i++) {
+          e[i].style.backgroundColor = 'tomato'
+          e[i].style.fontSize = '30px'
+        }
+
+        var c = document.getElementsByClassName('cl')
+        for (i = 0; i < c.length; i++) {
+          c[i].style.backgroundColor = 'cyan'
+          c[i].style.fontSize = '40px'
+        }
+
+        var x = document.getElementById('a')
+        x.style.backgroundColor = 'red'
+        x.style.fontSize = '50px'
+      }
+    </script>
+  </body>
+</html>

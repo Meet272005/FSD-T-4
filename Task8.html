@@ -1,0 +1,38 @@
+<!-- write to hadel following key events
+    give a key code for a key press
+    script should give message vowel is pressed on pressing vowel key 
+    bgcolor should change to red after realsing the pressed key 
+     -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body onkeypress="press(event)" onkeydown="bg()">
+    <script>
+      function press(e) {
+        if (
+          e.keyCode == 97 ||
+          e.keyCode == 65 ||
+          e.keyCode == 101 ||
+          e.keyCode == 69 ||
+          e.keyCode == 105 ||
+          e.keyCode == 73 ||
+          e.keyCode == 111 ||
+          e.keyCode == 79 ||
+          e.keyCode == 117 ||
+          e.keyCode == 85
+        ) {
+          alert(e.keyCode + '  VOWEL IS PRESSED ')
+        } else {
+          alert(e.keyCode)
+        }
+      }
+      function bg() {
+        document.body.style.backgroundColor = 'red'
+      }
+    </script>
+  </body>
+</html>

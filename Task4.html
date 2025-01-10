@@ -1,0 +1,52 @@
+<!-- Write a Js to change text color and bg color on click using tag name method -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p>Hi</p>
+    <p>Hi</p>
+    <p>Hi</p>
+
+    <p class="p1">Hi</p>
+    <p class="p1">Hi</p>
+    <p class="p1">Hi</p>
+
+    <input type="button" value="Change" onclick="cls()" />
+    <script>
+      var ischanged = false
+      function cls() {
+        var p = document.getElementsByTagName('p')
+        for (var i = 0; i < p.length; i++) {
+          if (ischanged) {
+            p[i].innerHTML = 'Welcome'
+            p[i].style.backgroundColor = 'orange'
+            p[i].style.color = 'white'
+          } else {
+            p[i].innerHTML = 'Bye'
+            p[i].style.backgroundColor = 'black'
+            p[i].style.color = 'red'
+          }
+        }
+        ischanged = !ischanged
+
+        var c = document.getElementsByClassName('p1')
+        for (var i = 0; i < p.length; i++) {
+          if (ischanged) {
+            c[i].innerHTML = 'Welcome'
+            c[i].style.backgroundColor = 'green'
+            c[i].style.color = 'white'
+          } else {
+            c[i].innerHTML = 'Bye'
+            c[i].style.backgroundColor = 'purple'
+            c[i].style.color = 'green'
+          }
+        }
+        ischanged = !ischanged
+      }
+    </script>
+  </body>
+</html>
