@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        obj = document.forms['f1']
+        for (i = 0; i < obj.length; i++) {
+          if (obj[i].value.length == 0) {
+            alert('Must fill everything')
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form action="#" method="get" name="f1" onsubmit="fun()">
+      <input type="text" name="t1" />
+      <input type="password" name="t2" />
+      <input type="submit" /><input type="reset" />
+    </form>
+  </body>
+</html>

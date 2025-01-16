@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <script>
+    function fun() {
+      a = document.getElementById('fname')
+      alert('Welcome ' + a.value)
+    }
+    function fun2(id) {
+      id.value = id.value.toUpperCase()
+    }
+
+    function fun3(id) {
+      id.value = id.value.toLowerCase()
+    }
+
+    function fun4() {
+      obj = document.f1.t1.value
+      document.write(obj)
+    }
+
+    function fun5() {
+      obj = document.forms['f2']
+      alert(obj.length)
+    }
+
+    function fun6() {
+      //   pat = /abc/    # case sensitive and considered as word
+      //   pat = /abc/i   # case insensitive
+      //   pat = /[abc]/  # consider as individual letter instead ogf word
+      //   pat = /[^abc]/ # case sensitive and works for everything except abc
+      //   pat = /[0-9]/    # there should be at least one digit
+      // pat = /[^0-9]/ #There should not be only digits
+      pat = /[x|y]/
+      u = document.getElementById('t1').value
+      if (pat.test(u)) {
+        document.write('Perfect & value is ' + u)
+      } else {
+        document.write('Not Perfect & value is ' + u)
+      }
+    }
+  </script>
+  <body>
+    <!--                                   FORM EVENT
+                                                onblur
+                                                onchange
+                                                onfocus
+                                                onsubmit
+        -->
+
+    <form action="#" method="get" onsubmit="fun()">
+      <input type="text" name="fname" id="fname" />
+      <input type="submit" value="submit" />
+      <input type="text" value="onchange" onchange="fun2(this)" />
+      <input
+        type="text"
+        value="Focus"
+        onfocus="this.style.backgroundColor='yellow'"
+      />
+      <input type="text" value="ONBLUR" onblur="fun3(this)" />
+    </form>
+
+    <br />
+
+    <form name="f1" onsubmit="fun4()">
+      <input type="text" name="t1" />
+      <input type="password" name="t2" />
+      <input type="submit" /><input type="reset" />
+    </form>
+
+    <br />
+
+    <form name="f2" onsubmit="fun5()">
+      <input type="text" name="t1" />
+      <input type="password" name="t2" />
+      <input type="submit" /><input type="reset" />
+    </form>
+
+    <br />
+
+    <form>
+      <input type="text" id="t1" />
+      <input type="submit" onclick="fun6()" />
+    </form>
+
+  </body>
+</html>
