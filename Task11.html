@@ -1,0 +1,40 @@
+<!-- write a JS to validate username and password 
+        case 1: PWD length must be between 6 to 12 characters
+        case 2: Username should not start with _,@ and any digit
+        case 3: Both field must not be blank -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        u = document.getElementById('t1').value
+        p = document.getElementById('t2').value
+        pat = /^_|^@|^\d/
+        if (pat.test(u) == 1) {
+          alert('Username should not start with _,@ and any digit')
+        } else {
+          if (p.length < 6 || p.length > 12) {
+            alert('PWD length must be between 6 to 12 characters')
+          } else {
+            if (u.length == 0) {
+              alert('Both field must not be blank')
+            } else {
+              alert('VALID')
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <input type="text" id="t1" /><br />
+      <input type="password" id="t2" /><br />
+      <input type="submit" onclick="fun()" />
+    </form>
+  </body>
+</html>

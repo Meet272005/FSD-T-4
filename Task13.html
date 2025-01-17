@@ -1,0 +1,28 @@
+<!-- Write a html form accepting an integer having four digits only
+ input should not accept characters of letter and special symbol -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function fun() {
+        pat = /^\d{14}\@\w{4}\.\w{4}\.\w{3}\.\w{2}$/
+        e = document.getElementById('t1').value
+        if (pat.test(e)) {
+          alert('Valid')
+        } else {
+          alert('Invalid')
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <form>
+      <!-- 23002171210015@mail.ljku.edu.in -->
+      <input type="text" id="t1" />
+      <input type="submit" onclick="fun()" />
+    </form>
+  </body>
+</html>
