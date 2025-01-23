@@ -1,1 +1,61 @@
 <!-- WAP to display form element vlue: fname,lnmae.=,gender and selected game -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      ;(function (a) {
+        return (function () {
+          console.log(a)
+          a = 5
+        })()
+      })(10)
+
+      book = new Array(1, 2, 3, 4, 5, 6, 7, 8)
+      document.write(book[1] + '<br>')
+      book[10] = 10
+      document.write(book[10])
+
+      let p = { x: 10, y: 5 }
+      let { x: newx, y: newy } = p
+      console.log(newx++ + ++newy)
+
+      class Demo {
+        constructor(p, q) {
+          this.p = p
+          this.q = q
+        }
+        disp = () => {
+          console.log(this.p + this.q) //without this Error
+        }
+      }
+      let obj = new Demo(2, 3)
+      obj.disp()
+
+      const add = (j, k) => {
+        ans = `${j + k}`
+      }
+      console.log('\n\n Ans ' + add(8, 9))
+
+      const check = () => {
+        args = [10, 20, 30, 40, 50]
+        args1 = [60, 70]
+        arg = [...args, ...args1]
+        let sum = 0
+        for (x of args) {
+          sum = sum + ' ' + args[x]
+        }
+        for (x in args) {
+          sum = sum + ' ' + args[x]
+        }
+
+        console.log(sum)
+      }
+      check()
+    </script>
+  </body>
+</html>

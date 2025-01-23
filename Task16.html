@@ -1,0 +1,45 @@
+<!-- write ES6 script that create time having members hour,min and second .create two time object t1 t2 and add
+both the time objects so that it should return in third time object named T.Third time object should have hour,min and second
+such that addition of seconds exceeds 60 then a min should be incremented. if min exceeds 60 then an hour should be incremented. -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      class Time {
+        constructor(hour, min, second) {
+          this.hour = hour
+          this.min = min
+          this.second = second
+        }
+
+        addTime = (T1, T2) => {
+          let s = T1.second + T2.second
+          let h = T1.hour + T2.hour
+          let m = T1.min + T2.min
+          if (s => 60) {
+            m = m + 1
+            s = s - 60
+          }
+          if (m >= 60) {
+            h = h + 1
+            m = m - 60
+          }
+          return new Time(h, m, s)
+        }
+      }
+
+      const T1 = new Time(1, 59, 56)
+      const T2 = new Time(2, 2, 6)
+      const T3 = new Time()
+      const T = T3.addTime(T1, T2)
+      console.log(T.hour + ' ' + T.min + ' ' + T.second)
+    
+    </script>
+  </body>
+</html>
