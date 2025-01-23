@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div id="demo" onclick="change()" class="bg-info">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Odit repudiandae
+      est tempora, fugit repellendus deleniti!
+    </div>
+    <body>
+      <form method="get" name="f1" action="#" onsubmit="onc">
+        first name:<input type="text" name="fname" id="fname" /><br />
+        last name:<input type="text" name="lname" id="lname" /><br />
+        Gender: <input type="radio" value="male" name="gender" id="g" />Male
+        <input type="radio" value="female" name="gender" id="g" />Female<br />
+        Select:
+        <input type="checkbox" value="football" id="s" />football
+        <input type="checkbox" value="cricket" id="s" /> cricket
+        <input type="checkbox" value="basketball" id="s" /> basketball
+        <br /><input type="submit" />
+      </form>
+    </body>
+    <script>
+      function onc() {
+        fname = document.f1.fname.value
+        // lname = document.getElementById('lname').value
+        // g = document.getElementById('g').value
+        // s = document.getElementById('s').value
+        localStorage.setItem('fname', fname)
+        console.log(localStorage.getItem('fname'))
+      }
+
+      change = (bg, tc, size = '50px', style = 'italic') => {
+        i = document.getElementById('demo')
+        i.style.color = tc
+        i.style.background = bg
+        i.style.fontStyle = size
+        i.style.fontSize = style
+      }
+
+      //   change = () => {
+      //     i = document.getElementById('demo')
+      //   }
+    </script>
+  </body>
+</html>

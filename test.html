@@ -1,0 +1,39 @@
+<!-- Write es6 function to be called on button click take one div with some text and no decoration initially,take a font size 50px and italic style as a default argument and pass the bg-color and text color to function on button click ,all the new property will have to set -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <script>
+      func = (bg, tc, size = '50px', style = 'italic') => {
+        i = document.getElementById('demo')
+        i.style.color = tc
+        i.style.fontStyle = style
+        i.style.background = bg
+        i.style.fontSize = size
+      }
+
+      function func4() {
+        obj = document.f1.t1.value
+        document.write(obj)
+        localStorage.setItem('uname', obj)
+      }
+      console.log(localStorage.getItem('uname'))
+    </script>
+    <div id="demo" onclick="func('purple','white')">
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odio ipsa
+      facilis alias molestias non praesentium, aperiam dolores placeat dolorem
+      at rerum labore? Non, vero quia. Numquam mollitia corrupti nemo sunt.
+    </div>
+    <form name="f1" method="get" onsubmit="func4()">
+      <input type="text" name="t1" />
+      <input type="submit" />
+    </form>
+    <p id="demo"></p>
+  </body>
+</html>
